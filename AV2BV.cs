@@ -15,7 +15,7 @@ public class AV2BV : UdonSharpBehaviour
     private long add = 8728348608;
     private int a58 = 58;
     private int[] s = { 11, 10, 3, 8, 4, 6 };
-    private string BVTemple = "BV1  4 1 7  ";
+    private string BVTemplate = "BV1  4 1 7  ";
     void Start()
     {
         Debug.Log("av106=" + av2bv("AV106"));
@@ -35,7 +35,7 @@ public class AV2BV : UdonSharpBehaviour
         }
         if (avlong == 0) return "error";
         avlong = (avlong ^ xor) + add;
-        string BV = BVTemple;
+        string BV = BVTemplate;
         for (int i = 0; i < s.Length; i++)
         {
             BV = BV.Remove(s[i], 1);
