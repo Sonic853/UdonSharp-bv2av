@@ -8,7 +8,6 @@ using VRC.Udon;
 public class AV2BV : UdonSharpBehaviour
 {
     public string av;
-    public long avnum;
     public string bv;
     private string[] table = { "f", "Z", "o", "d", "R", "9", "X", "Q", "D", "S", "U", "m", "2", "1", "y", "C", "k", "r", "6", "z", "B", "q", "i", "v", "e", "Y", "a", "h", "8", "b", "t", "4", "x", "s", "W", "p", "H", "n", "J", "E", "7", "j", "L", "5", "V", "G", "3", "g", "u", "M", "T", "K", "N", "P", "A", "w", "c", "F" };
     private long xor = 177451812;
@@ -18,7 +17,7 @@ public class AV2BV : UdonSharpBehaviour
     private string BVTemplate = "BV1  4 1 7  ";
     void Start()
     {
-        Debug.Log("av106=" + av2bv("AV106"));
+        Debug.Log("av10492=" + av2bv("AV10492"));
         Debug.Log("BV17R4y157V8=" + bv2av("BV17R4y157V8"));
     }
     string av2bv(string AV)
@@ -54,7 +53,7 @@ public class AV2BV : UdonSharpBehaviour
         {
             int i1 = tableIndexOf(bv.Substring(s[i], 1));
             if (i1 == -1) return "error";
-            avdouble +=  i1 * Math.Pow(a58, i);
+            avdouble += i1 * Math.Pow(a58, i);
         }
         avdouble = avdouble - add;
         long avlong = 0;
